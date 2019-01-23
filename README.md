@@ -59,3 +59,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/kaorim
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Credits
+
+The idea of starting the New Relic agent using the Rack middleware is borrowed from [partiarelic](https://github.com/wata-gh/partiarelic).
