@@ -1,5 +1,6 @@
 #include <errno.h>
 #include <sys/mman.h>
+#include <unistd.h>
 #include "rack_new_relic_starter.h"
 
 VALUE eError;
@@ -13,7 +14,7 @@ latch_free(void *ptr)
 static size_t
 latch_size(const void *ptr)
 {
-    return 1;
+    return sysconf(_SC_PAGE_SIZE);
 }
 
 static const rb_data_type_t latch_data_type = {
@@ -59,7 +60,7 @@ check_latch(VALUE self)
  * call-seq:
  *    latch.open! -> nil
  *
- * Opens a latch.
+ * Opens the latch.
  *
  *    latch = Rack::NewRelic::Starter::Latch.new
  *    latch.opened? #=> false
