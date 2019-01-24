@@ -46,6 +46,22 @@ require 'rack/new_relic/starter'
 use Rack::NewRelic::Starter, latch: $latch
 ```
 
+### Rails
+
+You can configure Rails to add the middleware to the middleware stack with the default options by requiring `rack/new_relic/starter/rails.rb`:
+
+```ruby
+# Gemfile
+gem 'rack-new_relic-starter', require: 'rack/new_relic/starter/rails'
+```
+
+If you need to specify options, you can manually configure the middleware:
+
+```ruby
+# config/initializers/rack_new_relic_starter.rb
+Rails.application.config.middleware.use Rack::NewRelic::Starter, path: '/foo'
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
