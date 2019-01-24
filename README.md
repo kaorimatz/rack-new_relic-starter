@@ -1,5 +1,8 @@
 # Rack::NewRelic::Starter
 
+[![Gem](https://img.shields.io/gem/v/rack-new_relic-starter.svg?style=flat-square)](https://rubygems.org/gems/rack-new_relic-starter)
+[![Travis](https://img.shields.io/travis/kaorimatz/rack-new_relic-starter.svg?style=flat-square)](https://travis-ci.org/kaorimatz/rack-new_relic-starter)
+
 A Rack middleware that provides an endpoint to start the New Relic agent.
 
 ## Installation
